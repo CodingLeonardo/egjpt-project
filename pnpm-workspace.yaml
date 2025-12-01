@@ -1,0 +1,11 @@
+packages:
+  - apps/*
+  - packages/*
+
+nodeLinker: hoisted
+
+onlyBuiltDependencies:
+  - '@prisma/engines'
+  - esbuild
+  - prisma
+  - unrs-resolver
