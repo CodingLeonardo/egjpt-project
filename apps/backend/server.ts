@@ -3,6 +3,7 @@ import morgan from "morgan";
 import cors from "cors";
 
 import handleErrors from "./utils/handleErrors";
+import authRoutes from "./routes/auth.js";
 
 // Server Class
 class Server {
@@ -25,6 +26,7 @@ class Server {
   }
 
   public routes(): void {
+    this.app.use("/api/auth", authRoutes);
     this.app.use(handleErrors);
   }
 
